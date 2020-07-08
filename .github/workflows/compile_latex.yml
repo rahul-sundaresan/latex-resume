@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Build LaTeX document, upload it as a release 
 on: [push]
 jobs:
   build_latex:
@@ -10,3 +10,8 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
+      - name: Upload a Release Asset
+        uses: actions/upload-release-asset@v1.0.2
+        with:
+          name: resume
+          path: main.pdf
