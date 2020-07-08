@@ -23,7 +23,6 @@
 
 \documentclass[10pt,a4paper]{altacv}
 
-
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages. 
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
@@ -33,15 +32,15 @@
 %% Academicons.ttf in your operating system's font %% folder.
 
 
-% Change the page layout if you need to
-\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
-
 % Change the font if you want to.
 
 % If using pdflatex:
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
+\usepackage[colorlinks=true, urlcolor=red]{hyperref}
+
+
 
 \usepackage{eurosym}
 \usepackage{amstext} % for \text
@@ -51,6 +50,8 @@
 
 % If using xelatex or lualatex:
 % \setmainfont{Lato}
+
+
 
 % Change the colours if you want to
 \definecolor{VividPurple}{HTML}{100000}
@@ -67,77 +68,68 @@
 \renewcommand{\ratingmarker}{\faCircle}
 
 \begin{document}
+
 \name{Rahul Sundaresan}
-\tagline{I am a software developer looking for remote internship opportunities for Fall 2020, especially in the field of network programming}
-% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\tagline{I am a graduate student currently pursuing a MS degree in Computer Science at UNC Charlotte.
+My interests lie in computer networks and web development with React. I am looking for remote software development opportunities for Fall 2020}
+
 
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
-    \email{rahul@rsun.dev}
-    \phone{(980)-255-0390}
-    \homepage{https://rsun.dev}
-    \github{https://github.com/rahul-sundaresan}
-    \linkedin{https://www.linkedin.com/in/rahul-sundaresan/}
-  \location{Charlotte, North Carolina} 
+    \email{\href{mailto:rahul@rsun.dev}{rahul@rsun.dev}}
+    \phone{\href{tel:+19802550390}{(980)-255-0390}}
+    \homepage{\url{https://rsun.dev}}
+    \linkedin{\url{https://www.linkedin.com/in/rahul-sundaresan/}}
   % I'm just making this up though.
 %   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
 }
 
 %% Make the header extend all the way to the right, if you want.
-\begin{fullwidth}
-\makecvheader
-\end{fullwidth}
+
 
 %% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
 %% You can always just use \marginpar{...} if you do
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
-\cvsection[page1sidebar]{Professional Experience}
+\begin{twocolumn}[
+    
+    \makecvheader
+ 
+]
 
 
-\cvevent{Research Assistant}{University of Nevada at Las Vegas}{June 2020--Current}{Las Vegas, Nevada}
-\begin{itemize}
-    \item Deployed network simulations to measure the TCP throughput under varying latency and loss rate for single path and multipath networks  
-    \item Graphed the results using plotly.
-    \item Stack: Python, Mininet, Plotly, pandas.
-\end{itemize}
+\cvsection{Education}
+
+\cvevent{M.S. Computer Science \hfill GPA: 3.6/4.0}{University of North Carolina at Charlotte}{2019--Current}{Charlotte, North Carolina}
+
 \divider
 
-\cvevent{Software Development Intern}{L\&T (Smart World \& Communication)}{May 2018--June 2018}{Chennai, India}
-\begin{itemize}
-    \item Summarized technical tenders about IMS based solutions into concise reports.
-    \item Programmed a tool using Python and \emph{OpenCV} library  to detect if a supplied video was out of focus or blurry. 
-    \item Stack: Python, OpenCV.
-\end{itemize}
+\cvevent{B.Tech Computer Science \hfill GPA: 6.9/10.0}{SASTRA University}{2015--2019}{Thanjavur, India}
+
+\input{experience}
+
+\input{Projects}
+
+\cvsection{Skills}
+
+\cvsubsection{Programming}
+    \cvtag{LaTeX}
+    \cvtag{Python 3}
+    \cvtag{Java (Android Development)}
+    \cvtag{React}
+    \cvtag{Gatsby}
+    \cvtag{\LaTeX}
+    
 \divider
 
-\cvevent{Software Development Intern}{Capgemini Technology Services (Storage and Infrastructure team)}{November 2017--December 2017}{Bangalore, India}
-\begin{itemize}
-    \item Augmented an in-house software written with PHP with the ability to create and manage rundeck jobs using the \emph{Rundeck API}
-    \item Implemented single sign-on between rundeck and the inhouse software
-    \item Stack: PHP, Rundeck.
-\end{itemize}
-\divider
-
-\cvevent{Software Development Intern}{Perpetuuiti Technosoft}{November2016--December 2016}{Chennai, India}
-\begin{itemize}
-    \item Built an application with a GUI using the \emph{Eldos Callback Filter} to track changes to files and rollback changes occurring in the Windows filesystem using C++
-    \item Stack: Windows API, C++
-\end{itemize}
-\divider
-
-
-\cvevent{Network and Sysadmin Intern}{Pat \& Venky}{January 2016--Current}{Chennai, India}
-\begin{itemize}
-    \item Set up a NAS along with a backup system for collaboration
-    \item Deployed IPv6 for end clients along with proper firewalling
-    \item Upgraded the network to use Unifi hardware
-    and set up appropriate VLANs for management, different departments and the CCTV network
-    \item Setup a cloud hosted Unifi controller on google cloud platform (GCP) and set up appropriate firewall policies for the VM
-    \item Charted out a migration plan to Microsoft 365
-\end{itemize}
-
-
+\cvsubsection{Tools and technologies}
+    \cvtag{Git}
+    \cvtag{REST APIs}
+    \cvtag{IPv6}
+    \cvtag{Software Defined Networks (SDN)}
+    \cvtag{Mininet}
+    \cvtag{Netlify}
+\end{twocolumn}
 
 \end{document}

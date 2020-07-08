@@ -24,7 +24,7 @@
 
 \LoadClass{extarticle}
 
-\RequirePackage[margin=2cm]{geometry}
+\RequirePackage[margin=1cm]{geometry}
 \RequirePackage{fontawesome}
 
 %% v1.1: Optionally load academicons
@@ -95,9 +95,7 @@
 
 \newcommand{\makecvheader}{%
   \begingroup
-    \ifdef{\@photodiameter}{\begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}}{}%
-    \raggedright\color{emphasis}%
-    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    {\huge\bfseries\MakeUppercase{\@name}\par}
     \medskip
     {\large\bfseries\color{accent}\@tagline\par}
     \medskip
@@ -129,13 +127,14 @@
 }
 
 \newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1\par}
-  \smallskip
-  \textbf{\color{accent}#2}\par
-  \smallskip
-  {\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#3}%
-  \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}\par}
-  \medskip
+    {\large\color{emphasis}#1\par}
+    \smallskip
+    \textbf{\color{accent}#2}\par
+    \smallskip
+    \small\faCalendar\hspace{0.5em}#3 
+    \hfill
+    \faMapMarker\hspace{0.5em}#4
+    \par
 }
 
 \newcommand{\cvachievement}[3]{%
