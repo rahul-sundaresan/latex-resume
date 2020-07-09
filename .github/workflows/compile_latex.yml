@@ -1,5 +1,6 @@
-name: Build LaTeX document, upload it as a release 
-on: [push]
+name: Build LaTeX document, upload it as a release and ping the website repo
+on: 
+  push
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,3 +28,11 @@ jobs:
           asset_path: ./resume.pdf
           asset_name: resume.pdf
           asset_content_type: application/pdf
+    
+      - name: Ping repo once release is created
+        uses: peter-evans/repository-dispatch@v1.1.1
+        with:
+          token: ${{ secrets.ACCESS_PUBLIC_TOKEN }}
+          repository: rahul-sundaresan/gatsby-resume
+          event-type: update_resume
+  
