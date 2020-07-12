@@ -12,29 +12,8 @@
 %% version 2003/12/01 or later.
 %%%%%%%%%%%%%%%%
 
-%% If you want to use \orcid or the
-%% academicons icons, add "academicons"
-%% to the \documentclass options. 
-%% Then compile with XeLaTeX or LuaLaTeX.
-% \documentclass[10pt,a4paper,academicons]{altacv}
+\documentclass[10pt,a4paper]{altacv}
 
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
-
-\documentclass[11pt,a4paper]{altacv}
-
-%% AltaCV uses the fontawesome and academicon fonts
-%% and packages. 
-%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
-%% When using the "academicons" option,
-%% Compile with LuaLaTeX for best results. If you
-%% want to use XeLaTeX, you may need to install
-%% Academicons.ttf in your operating system's font %% folder.
-
-
-% Change the font if you want to.
-
-% If using pdflatex:
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
@@ -71,7 +50,7 @@
 
 \name{Rahul Sundaresan}
 \tagline{I am a graduate student currently pursuing a MS degree in Computer Science at UNC Charlotte.
-My interests lie in computer networks and web development with React. I am looking for remote software development opportunities for Fall 2020}
+My interests lie in computer networks and web development with React. I am looking for full time software development opportunities for Fall 2021.}
 
 
 \personalinfo{%
@@ -80,7 +59,8 @@ My interests lie in computer networks and web development with React. I am looki
     \email{\href{mailto:rahul@rsun.dev}{rahul@rsun.dev}}
     \phone{\href{tel:+19802550390}{(980)-255-0390}}
     \homepage{\url{https://rsun.dev}}
-    \linkedin{\url{https://www.linkedin.com/in/rahul-sundaresan/}}
+    \github{\url{https://github.com/rahul-sundaresan}}
+    %\linkedin{\url{https://www.linkedin.com/in/rahul-sundaresan/}}
   % I'm just making this up though.
 %   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
 }
@@ -112,22 +92,27 @@ My interests lie in computer networks and web development with React. I am looki
 \cvsection{Skills}
 
 \cvsubsection{Programming}
-    \cvtag{LaTeX}
-    \cvtag{Python 3}
-    \cvtag{Java (Android Development)}
+    \cvtag{Python}
     \cvtag{React}
-    \cvtag{Gatsby}
-    \cvtag{\LaTeX}
+    \cvtag{LaTeX}
+    \cvtag{Java (Android Development)}
+
+
+    
     
 \divider
 
-\cvsubsection{Tools and technologies}
+\cvsubsection{Tools and Libraries}
+    \cvtag{Software Defined Networks (SDN)}
+    \cvtag{Gatsby}
     \cvtag{Git}
     \cvtag{REST APIs}
     \cvtag{IPv6}
-    \cvtag{Software Defined Networks (SDN)}
     \cvtag{Mininet}
     \cvtag{Netlify}
+    \cvtag{Plotly}
+    \cvtag{pandas}
+    \cvtag{react-d3-graph}
     \cvtag{GitHub Actions}
 \end{twocolumn}
 
