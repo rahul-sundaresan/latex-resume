@@ -97,8 +97,6 @@
   \begingroup
     {\huge\bfseries\MakeUppercase{\@name}\par}
     \medskip
-    {\large\bfseries\color{accent}\@tagline\par}
-    \medskip
     {\footnotesize\bfseries\@personalinfo\par}
     \ifdef{\@photodiameter}{%
     \end{minipage}\hfill%
