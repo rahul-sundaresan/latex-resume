@@ -27,9 +27,6 @@
   \ifmmode\expandafter\text\fi
   {\fontencoding{U}\fontfamily{eurosym}\selectfont e}}
 
-% If using xelatex or lualatex:
-% \setmainfont{Lato}
-
 
 
 % Change the colours if you want to
@@ -49,9 +46,6 @@
 \begin{document}
 
 \name{Rahul Sundaresan}
-\tagline{Graduate student currently pursuing Masters in Computer Science at UNC Charlotte.
-My interests lie in computer networks and web development with React. Actively looking for full time software development opportunities starting Summer 2021.}
-
 
 \personalinfo{%
   % Not all of these are required!
@@ -65,13 +59,7 @@ My interests lie in computer networks and web development with React. Actively l
 %   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
 }
 
-%% Make the header extend all the way to the right, if you want.
 
-
-%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
-%% You can always just use \marginpar{...} if you do
-%% not need to align the top of the contents to any
-%% \cvsection title in the "main" bar.
 \begin{twocolumn}[
     \makecvheader
 ]
@@ -79,49 +67,19 @@ My interests lie in computer networks and web development with React. Actively l
 
 \cvsection{Education}
 
-\cvevent{M.S. Computer Science \hfill GPA: 3.6/4.0}{University of North Carolina at Charlotte}{2019--Current}{Charlotte, North Carolina}
+\cvevent{M.S. Computer Science}{University of North Carolina at Charlotte}{2019--2021}{Charlotte, North Carolina}
 
 \divider
 
-\cvevent{B.Tech Computer Science \hfill GPA: 6.9/10.0}{SASTRA University}{2015--2019}{Thanjavur, India}
+\cvevent{B.Tech Computer Science}{SASTRA University}{2015--2019}{Thanjavur, India}
+
+
+\input{Skills}
 
 \input{experience}
 
 \input{Projects}
 
-\cvsection{Skills}
-
-\cvsubsection{Programming}
-    \cvtag{Python}
-    \cvtag{LaTeX}
-    \cvtag{Java (Android Development)}
-    \cvtag{Javascript}
-    \cvtag{CSS}
-    \cvtag{HTML}
-    \cvtag{Node.js}
-
-
-
-    
-    
-\divider
-
-\cvsubsection{Tools and Libraries}
-    \cvtag{React}
-    \cvtag{React Native}
-    \cvtag{Software Defined Networks (SDN)}
-    \cvtag{Gatsby}
-    \cvtag{Git}
-    \cvtag{REST APIs}
-    \cvtag{IPv6}
-    \cvtag{Mininet}
-    \cvtag{Plotly}
-    \cvtag{pandas}
-    \cvtag{react-d3-graph}
-    \cvtag{GitHub Actions}
-    \cvtag{Agile Development}
-    \cvtag{Google Cloud Functions}
-    \cvtag{Firebase}
 
 
 \end{twocolumn}

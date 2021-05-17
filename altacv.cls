@@ -10,7 +10,7 @@
 %% and version 1.3 or later is part of all distributions of LaTeX
 %% version 2003/12/01 or later.
 %%%%%%%%%%%%%%%%
-\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{altacv}[2017/04/30 AltaCV v1.1.3, yet another alternative class for a résumé/curriculum vitae.]
 
 %% v1.1: Optionally load academicons
@@ -109,6 +109,7 @@
       \tikz\path[fill overzoom image={\@photo}]circle[radius=0.5\linewidth];
     \fi%
     \end{minipage}\par}{}%
+    \nopagebreak[4]
   \endgroup\medskip
 }
 
