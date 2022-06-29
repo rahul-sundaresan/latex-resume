@@ -30,7 +30,7 @@ jobs:
           asset_content_type: application/pdf
     
       - name: Ping repo once release is created
-        uses: peter-evans/repository-dispatch@v1.1.1
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.ACCESS_PUBLIC_TOKEN }}
           repository: rahul-sundaresan/gatsby-resume
